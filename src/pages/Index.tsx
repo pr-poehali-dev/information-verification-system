@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import Icon from "@/components/ui/icon";
+import { Link } from "react-router-dom";
 
 export default function Index() {
   const verificationLevels = [
@@ -77,12 +78,12 @@ export default function Index() {
               </div>
             </div>
             <nav className="hidden md:flex space-x-6">
-              <a href="#" className="text-foreground hover:text-primary font-suisse">Главная</a>
-              <a href="#" className="text-foreground hover:text-primary font-suisse">Новости</a>
-              <a href="#" className="text-foreground hover:text-primary font-suisse">Методика</a>
-              <a href="#" className="text-foreground hover:text-primary font-suisse">Гайды</a>
-              <a href="#" className="text-foreground hover:text-primary font-suisse">О нас</a>
-              <a href="#" className="text-foreground hover:text-primary font-suisse">Контакты</a>
+              <Link to="/" className="text-primary font-suisse">Главная</Link>
+              <Link to="/news" className="text-foreground hover:text-primary font-suisse">Новости</Link>
+              <Link to="/methodology" className="text-foreground hover:text-primary font-suisse">Методика</Link>
+              <Link to="/guides" className="text-foreground hover:text-primary font-suisse">Гайды</Link>
+              <Link to="/about" className="text-foreground hover:text-primary font-suisse">О нас</Link>
+              <Link to="/contact" className="text-foreground hover:text-primary font-suisse">Контакты</Link>
             </nav>
             <Button className="md:hidden">
               <Icon name="Menu" size={20} />
@@ -103,13 +104,17 @@ export default function Index() {
             достоверности информации в режиме реального времени
           </p>
           <div className="flex justify-center gap-4">
-            <Button size="lg" className="font-suisse">
-              <Icon name="Search" size={20} className="mr-2" />
-              Проверить новость
+            <Button asChild size="lg" className="font-suisse">
+              <Link to="/contact">
+                <Icon name="Search" size={20} className="mr-2" />
+                Проверить новость
+              </Link>
             </Button>
-            <Button variant="outline" size="lg" className="font-suisse">
-              <Icon name="BookOpen" size={20} className="mr-2" />
-              Как мы работаем
+            <Button asChild variant="outline" size="lg" className="font-suisse">
+              <Link to="/methodology">
+                <Icon name="BookOpen" size={20} className="mr-2" />
+                Как мы работаем
+              </Link>
             </Button>
           </div>
         </div>

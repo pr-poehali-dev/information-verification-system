@@ -18,6 +18,10 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'montserrat': ['Montserrat', 'sans-serif'],
+				'open-sans': ['Open Sans', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -61,6 +65,18 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				verified: {
+					DEFAULT: '#059669',
+					foreground: '#ffffff'
+				},
+				warning: {
+					DEFAULT: '#f59e0b',
+					foreground: '#ffffff'
+				},
+				opinion: {
+					DEFAULT: '#6b7280',
+					foreground: '#ffffff'
 				}
 			},
 			borderRadius: {

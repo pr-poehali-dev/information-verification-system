@@ -45,7 +45,7 @@ export default function Index() {
   const getStatusBadge = (status: string) => {
     const level = verificationLevels.find(v => v.label === status);
     return level ? (
-      <Badge className={`${level.color} ${level.textColor} font-open-sans text-xs`}>
+      <Badge className={`${level.color} ${level.textColor} font-inter text-xs`}>
         {status}
       </Badge>
     ) : null;
@@ -70,19 +70,19 @@ export default function Index() {
                 className="h-12 w-12"
               />
               <div>
-                <h1 className="text-2xl font-bold font-montserrat">СРЗНО</h1>
-                <p className="text-sm text-muted-foreground font-open-sans">
+                <h1 className="text-2xl font-bold font-aktiv">СРЗНО</h1>
+                <p className="text-sm text-muted-foreground font-inter">
                   Система Расследований и Защиты Новостной Объективности
                 </p>
               </div>
             </div>
             <nav className="hidden md:flex space-x-6">
-              <a href="#" className="text-foreground hover:text-primary font-open-sans">Главная</a>
-              <a href="#" className="text-foreground hover:text-primary font-open-sans">Новости</a>
-              <a href="#" className="text-foreground hover:text-primary font-open-sans">Методика</a>
-              <a href="#" className="text-foreground hover:text-primary font-open-sans">Гайды</a>
-              <a href="#" className="text-foreground hover:text-primary font-open-sans">О нас</a>
-              <a href="#" className="text-foreground hover:text-primary font-open-sans">Контакты</a>
+              <a href="#" className="text-foreground hover:text-primary font-suisse">Главная</a>
+              <a href="#" className="text-foreground hover:text-primary font-suisse">Новости</a>
+              <a href="#" className="text-foreground hover:text-primary font-suisse">Методика</a>
+              <a href="#" className="text-foreground hover:text-primary font-suisse">Гайды</a>
+              <a href="#" className="text-foreground hover:text-primary font-suisse">О нас</a>
+              <a href="#" className="text-foreground hover:text-primary font-suisse">Контакты</a>
             </nav>
             <Button className="md:hidden">
               <Icon name="Menu" size={20} />
@@ -94,20 +94,20 @@ export default function Index() {
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-background to-muted">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-5xl font-bold font-montserrat mb-6">
+          <h2 className="text-5xl font-bold font-aktiv mb-6">
             Доверяйте фактам, <br />
             <span className="text-primary">не слухам</span>
           </h2>
-          <p className="text-xl text-muted-foreground font-open-sans mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-muted-foreground font-inter mb-8 max-w-2xl mx-auto">
             Мы проверяем новости, анализируем источники и предоставляем объективную оценку 
             достоверности информации в режиме реального времени
           </p>
           <div className="flex justify-center gap-4">
-            <Button size="lg" className="font-open-sans">
+            <Button size="lg" className="font-suisse">
               <Icon name="Search" size={20} className="mr-2" />
               Проверить новость
             </Button>
-            <Button variant="outline" size="lg" className="font-open-sans">
+            <Button variant="outline" size="lg" className="font-suisse">
               <Icon name="BookOpen" size={20} className="mr-2" />
               Как мы работаем
             </Button>
@@ -118,7 +118,7 @@ export default function Index() {
       {/* Verification System */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <h3 className="text-3xl font-bold font-montserrat text-center mb-12">
+          <h3 className="text-3xl font-bold font-aktiv text-center mb-12">
             Система пометок достоверности
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
